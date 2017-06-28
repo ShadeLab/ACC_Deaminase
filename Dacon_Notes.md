@@ -2,7 +2,7 @@
 
 ### Gene Search:
 
-  To search for ACC deaminase gene from JGI IMG, go to ([Find Genes] (https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=FindGenes&page=findGenes)). Then set the Keyword to **1-aminocyclopropane-1-carboxylate deaminase**, set the **Filters** to Gene Product Name (inexact). 
+  To search for ACC deaminase gene from JGI IMG, go to (https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=FindGenes&page=findGenes). Then set the Keyword to **1-aminocyclopropane-1-carboxylate deaminase**, set the **Filters** to Gene Product Name (inexact). 
   
   In regards to the **Sequencing Staus** click on All Finished, Permanent Draft and Draft. On the right of **Sequencing Status** you will see **Domain**, there are option such as Archeae, Bacteria, Eukaryota, Metagenome, All (Slow) and Gene Cart.
   
