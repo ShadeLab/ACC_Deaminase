@@ -10,7 +10,7 @@
   
   Be sure that the **List** is highlighted, then click **Show**.
   
-  A large list of studies will appear where the gene may or may not exist, select at most 50 at a time and add to ** Selected Genomes**.
+  A large list of studies will appear where the gene may or may not exist, select at most 50 at a time and add to **Selected Genomes**.
   
-  Lastly click **Go**
+  After these steps are executed, click **Go**.
   
