@@ -1,3 +1,9 @@
+## Background:
+  
+  A plant is subject to a wide range of both biotic and abiotic stresses that can limit the growth and development of the plant. In the research, the study of the bacterial gene 1-aminocyclopropane-1-carboxylate deaminase (ACCd), which is an enzyme that promotes plant growth and development during stress by decreasing plant ethylene levels, especially following a variety of environmental stresses. Bitoic stress consist fungal and bacterial pathogens, plant viruses, insect predation, nematode infections. Abiotic stress consist of temperature (High and Low), drought, flooding, high salt concentrations (Sea Blast), organic/ non-organic contaminants and excessive radiation. The one thing these stresses have in common is that they induce the plant to synthesize growth-inhibiting stress ethylene. As a result of these factors stress ethylene, formally known as ethylene synthesis is produced thus inducing decreased root and shoot lengths, increase leaf abscission, decreased dry weight, decreased chlorophyll content and decreased protein synthesis.
+  
+  
+  
 ## Commands:
 
 ### Gene Search:
