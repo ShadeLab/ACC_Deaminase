@@ -1,7 +1,7 @@
 ## Background:
   
-  A plant is subject to a wide range of both biotic and abiotic stresses that can limit the growth and development of the plant. In the research, the study of the bacterial gene 1-aminocyclopropane-1-carboxylate deaminase (ACCd), which is an enzyme that promotes plant growth and development during stress by decreasing plant ethylene levels, especially following a variety of environmental stresses. Bitoic stress consist fungal and bacterial pathogens, plant viruses, insect predation, nematode infections. Abiotic stress consist of temperature (High and Low), drought, flooding, high salt concentrations (Sea Blast), organic/ non-organic contaminants and excessive radiation. The one thing these stresses have in common is that they induce the plant to synthesize growth-inhibiting stress ethylene. As a result of these factors stress ethylene, formally known as ethylene synthesis is produced thus inducing decreased root and shoot lengths, increase leaf abscission, decreased dry weight, decreased chlorophyll content and decreased protein synthesis.
-  
+  + A plant is subject to a wide range of environmental stresses that can limit the growth and development of the plant. In this research, the study of distribution and diversity of the bacterial gene **_1-aminocyclopropane-1-carboxylate deaminase (ACCd)_** is examined. **_ACCd_** is an enzyme that promotes plant growth and development during stress by decreasing plant ethylene levels, especially following a variety of environmental stresses. Enviornmental stress consist of both bitoic and abiotic stress. Bitoic stress consist fungal and bacterial pathogens, plant viruses, insect predation, nematode infections. Abiotic stress consist of temperature (High and Low), drought, flooding, high salt concentrations (sea blast), organic/ non-organic contaminants and excessive radiation. The plant is influenced by theses stressors to synthesize growth-inhibiting stress ethylene. As a result of these factors stress ethylene, formally known as ethylene synthesis is produced thus inducing decreased root and shoot lengths, increase leaf abscission, decreased dry weight, decreased chlorophyll content and decreased protein synthesis.
+  + There is a gray area called Dark Matter, this consist of Diversity, Abundance, Phylogeny and Structure. However, this research will examine this area of Dark Matter in order to produce results, which can be beneficial to the world's population by increase food security. The distribution of **_ACCd_** is examined by retrieving its metadata, which includes _Gene ID, Locus Tag, Genome ID, Environmental data (geographical location, GPS cords), Culture Type, Depth, Ecosystem Category, Ecosystem Subtype, Ecosystem Type, Habitat, Isolation Country, Study Name and Sequencing Method._ The genome sequencing is crucial for a phylogenic tree which depicts a diagrammatic hypothesis of the history of the evolutionary relationship of this this gene.
   
   
 ## Commands:
@@ -29,7 +29,7 @@
     
 ### Export Genes 
 
-  After the metadata has been exported, there will be an option called **Upload & Export**, in the **Export Genes** click the *FASTA Nucleic Acid format*. Click **Show in Export Format** and the sequences will be exported in a .txt format.
+  After the metadata has been exported, there will be an option called **Upload & Export**, in the **Export Genes** click the *FASTA Nucleic Acid* format. Click **Show in Export Format** and the sequences will be exported in a .txt format.
   
   
   
