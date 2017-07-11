@@ -50,7 +50,7 @@ File contains notes on ACCd Project: includes synopsis, preliminary data mining 
 * After the metadata has been exported, there will be an option called **Upload & Export**, in the **Export Genes** click the *FASTA Nucleic Acid* format. Click **Show in Export Format** and the sequences will be displayed where it can be copied and pasted into in a .txt format.
   
   
-## Sequencing Alignnment Algorithms 
+## Sequencing Alignment Algorithms 
   * Quantitative Insights Into Microbial Ecology [**QIIME**](http://qiime.org/), pronounced as _chime_. **QIIME** is an open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. This algorithm is designed to take raw sequencing data and generate it on the Illumina or other platforms through publication quality graphics and statistics. This includes demultiplexing and quality filtering, OTU picking, taxonomic assignment, and phylogenetic reconstruction, and diversity analyses and visualizations. 
   
   * MUltiple Sequence Comparison by Log- Expectation, [**MUSCLE**](http://www.ebi.ac.uk/Tools/msa/muscle/) is claimed to achieve both better average accuracy and better speed than ***ClustalW2*** or ***T-Coffee*** (other multiple sequencing alignment algorithms), depending on the chosen options.
