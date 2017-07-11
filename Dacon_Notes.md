@@ -9,6 +9,7 @@ File contains notes on ACCd Project: includes synopsis, preliminary data mining 
 * [Sequencing Alignment Algorithms](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#sequence-alignment-algorithms)
 * [Scripts](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#scripts)
   * [Job Scripts](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#job-scripts)
+  * [Phylogeny](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#phylogeny)
   * [Beta Diversity](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#beta-diversity)
 * [Metadata](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#metadata)
 * [R Studio Scripts](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#r-studio-scripts)
@@ -150,6 +151,73 @@ cd /mnt/research/ShadeLab/WorkingSpace/Dacon
 muscle -in ATCG_seqs.txt -out aligned_seqs -maxiters 2
 ```
 
+### Phylogeny
+
+A phylogeny or phylogenetic tree is an evolutionary relationships among various biological species and/ or other entities
+based upon there similarities/ differences in their genetic characteristics. However, with the number of sequences, this make take some time so create a job script in a .qsub file.
+* Firstly, one needs to align the sequences.
+* Secondly, one needs filter the sequences.
+* Lastly, with this retrieved data of the filtered sequences the phylogeny can now be made.
+ ```
+ #!/bin/bash -login
+
+### define resources needed:
+### walltime - how long you expect the job to run
+#PBS -l walltime=24:00:00
+
+### nodes:ppn - how many nodes & cores per node (ppn) that you require
+#PBS -l nodes=1:ppn=1
+
+### mem: amount of memory that the job will need
+#PBS -l mem=24gb
+
+##Setting the core wanted
+#PBS -l feature=intel16
+
+### you can give your job a name for easier identification
+#PBS -N acc_cult_align
+
+### load necessary modules, e.g.
+module load MUSCLE/3.8.31
+
+### change to the working directory where your code is located
+cd /mnt/research/ShadeLab/WorkingSpace/Dacon/ACC
+
+### call your executable
+muscle -out aligned_rep_set_pfiltered.fasta -in cult_and_rep_set.fna -maxiters 1
+```
+Use the scripts as follows to create a phylogeny. This may take a while so create job scripts in a .qsub file.
+```
+#!/bin/bash -login
+
+### define resources needed:
+### walltime - how long you expect the job to run
+#PBS -l walltime=24:00:00
+
+### nodes:ppn - how many nodes & cores per node (ppn) that you require
+#PBS -l nodes=1:ppn=1
+
+### mem: amount of memory that the job will need
+#PBS -l mem=64gb
+
+##Setting the core wanted
+#PBS -N ACC_qiime
+
+### you can give your job a name for easier identification
+#PBS -N jad_filt_ACC
+
+### load necessary modules, e.g.
+module load QIIME/1.8.0
+
+### change to the working directory where your code is located
+cd /mnt/research/ShadeLab/WorkingSpace/Dacon/ACC
+
+### call your executable
+make_phylogeny.py -i aligned_rep_set_pfiltered.fasta -o full_tree.tre
+```
+After retrieving the `full_tree.tre` files, copy this file to your desktop and go to [**ITOL**](http://itol.embl.de/upload.cgi). To find this file, click where its says **Browse**, located the file, select it and click **Upload** 
+ 
+ 
 ## Metadata
 
 Metadata collected from JGI, was collated to used to for Abundance files where the ACC was matched with rplB (a single copy gene) data, Map files which contains GPS coordinates such as longitudinal and latitudinal points to identify the gene's location on a world map, and an Alpha diversity which identifies the the diversity of each site along with Shannon diversity which presents the number of species present and species evenness. Those files are as follows:
@@ -184,12 +252,12 @@ ggplot(acc_abun, aes(Collapsed_Ord, Normalized_ACC, fill=Collapsed_Ord))+
   theme_bw()+
   coord_cartesian(ylim=c(0,1))+
   coord_flip()
-  ```
+```
 ACC Summary script
 ```
 ##### ACC summary  
 library(plyr)
-acc_sum<-ddply(acc_abun, c("Class"), summarise, N= length(Normalied_ACC), mean=mean(Normalied_ACC), sd=sd(Normalied_ACC), se=sd/sqrt(N))
+acc_sum<-ddply(acc_abun, c("Class"), summarise, N= length(Normalized_ACC), mean=mean(Normalized_ACC), sd=sd(Normalized_ACC), se=sd/sqrt(N))
 str(acc_sum)
 dodge <- position_dodge(width=.8)
 ggplot(acc_sum, aes(Class, mean, fill=Class, colour=Class, cex=1.5))+
