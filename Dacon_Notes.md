@@ -18,7 +18,7 @@ File contains notes on ACCd Project: includes synopsis, preliminary data mining 
 ## Background:
   
   + A plant is subject to a wide range of environmental stresses that can limit the growth and development of the plant. In this research, the study of distribution and diversity of the bacterial gene **_1-aminocyclopropane-1-carboxylate deaminase (ACCd)_** is examined. **_ACCd_** is an enzyme that promotes plant growth and development during stress by decreasing plant ethylene levels, especially following a variety of environmental stresses. Environmental stress consists of both biotic and abiotic stress. Biotic stress consists fungal and bacterial pathogens, plant viruses, insect predation, and nematode infections. Abiotic stress consists of temperature (high and low), drought, flooding, high salt concentrations (sea blast), organic/ non-organic contaminants and excessive radiation. The plant is influenced by these stressors to synthesize growth-inhibiting stress ethylene. As a result of these factors, stress ethylene, formally known as ethylene synthesis is produced thus inducing decreased root and shoot lengths, increased leaf abscission, decreased dry weight, decreased chlorophyll content and decreased protein synthesis.
-  + There is a gray area called Dark Matter, this area consists of Diversity, Abundance, Phylogeny and Structure. However, this research will examine this area of Dark Matter in order to produce results which can be beneficial to the world's population by implementing and increasing this gene in the environment to encourage the increase food security. The distribution of **_ACCd_** is examined by retrieving its metadata, which includes _Gene ID, Locus Tag, Genome ID, Environmental data, Geographical location (Longitude and Latitude coordinates), Culture Type, Depth, Ecosystem Category, Ecosystem Subtype, Ecosystem Type, Habitat, Isolation Country, Study Name and Sequencing Method._ The genome sequencing is crucial for a phylogenic tree which depicts a diagrammatic hypothesis of the history of the evolutionary relationship of this this gene present in the environment and can be compared to engineered genes. Alpha diversity is examined as this is the diversity of each site, in other words a local species pool. Beta diversity is also examined afterwards since this consists of the ratio between local and regional species diversity for example: _Marine, Fresh water, Soil and Waste water microbial commmunities_. Consequently, Beta diversity is a measure of species turnover, which amplifies the role of rare species as the difference in species composition between two sites or communities. Another form of diversity that can be examined is Shannon diversity, entailing species richness which refers to the number of species and species eveness which refers to the homogeneity of the species.
+  + There is a gray area called Dark Matter, this area consists of Diversity, Abundance, Phylogeny and Structure. However, this research will examine this area of Dark Matter in order to produce results which can be beneficial to the world's population by implementing and increasing this gene in the environment to encourage the increase food security. The distribution of **_ACCd_** is examined by retrieving its metadata, which includes _Gene ID, Locus Tag, Genome ID, Environmental data, Geographical location (Longitude and Latitude coordinates), Culture Type, Depth, Ecosystem Category, Ecosystem Subtype, Ecosystem Type, Habitat, Isolation Country, Study Name and Sequencing Method._ The genome sequencing is crucial for a phylogenic tree which depicts a diagrammatic hypothesis of the history of the evolutionary relationship of this this gene present in the environment and can be compared to engineered genes. Alpha diversity is examined as this is the diversity of each site, in other words a local species pool. Beta diversity is also examined afterwards since this consists of the ratio between local and regional species diversity for example: _Marine, Fresh water, Soil and Waste water microbial communities_. Consequently, Beta diversity is a measure of species turnover, which amplifies the role of rare species as the difference in species composition between two sites or communities. Another form of diversity that can be examined is Shannon diversity, entailing species richness which refers to the number of species and species eveness which refers to the homogeneity of the species.
   
   
 ## Commands:
@@ -155,7 +155,8 @@ muscle -in ATCG_seqs.txt -out aligned_seqs -maxiters 2
 Metadata collected from JGI, was collated to used to for Abundance files where the ACC was matched with rplB (a single copy gene) data, Map files which contains GPS coordinates such as longitudinal and latitudinal points to identify the gene's location on a world map, and an Alpha diversity which identifies the the diversity of each site along with Shannon diversity which presents the number of species present and species evenness. Those files are as follows:
 1. `acc_abun.txt`
 2. `acc_map.txt`
-3. `acc_alphaphied_map2.txt`
+3. `acc_alpha.txt`
+4. `acc_alphaphied_map2.txt`
 
 
 ## R Studio Scripts 
@@ -233,6 +234,8 @@ acc_alphaphied_map2 <- read_delim("acc_alphaphied_map2.txt", "\t", escape_double
 library(ggplot2)
 ggplot(acc_alphaphied_map2, aes(Collapsed_Eco, otus_obs, fill=Collapsed_Eco))+
   geom_boxplot()+
+  ylab("Shannon")+
+  xlab("")+
   coord_flip()+
   theme_bw()+
   scale_y_log10()
