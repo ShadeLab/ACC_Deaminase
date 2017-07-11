@@ -6,7 +6,7 @@ File contains notes on ACCd Project: includes synopsis, preliminary data mining 
 
 * [Background](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#background)
 * [Commands](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#commands)
-* [Sequencing Alignment Algorithms](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#sequence-alignment-algorithms)
+* [Sequencing Alignment Algorithms](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#sequencing-alignment-algorithms)
 * [Scripts](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#scripts)
   * [Job Scripts](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#job-scripts)
   * [Phylogeny](https://github.com/ShadeLab/ACC_Deaminase/blob/master/Dacon_Notes.md#phylogeny)
